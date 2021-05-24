@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  
   $('.responsive').slick({
     infinite: false,
     speed: 300,
@@ -44,3 +45,20 @@ mains.forEach(main => {
     btn.addEventListener("click", () => toggle.classList.toggle("border-bottom"));
     btn.addEventListener("click", () => search.classList.toggle("d-none"));
 });
+// popup
+$('.popup-exit').on('click',function(){
+  $(this).closest('.popup').removeClass('open');
+})
+
+$('.btn-entrance').on('click',function(){
+  $('.entrance').addClass('open');
+  $('.toggler').prop('checked',false);
+  $('.main, .catalog, .2sec').addClass('d-none');
+});
+
+$('.btn-registrations').on('click',function(){
+  $('.registrations').addClass('open');
+  $('.toggler').prop('checked',false);
+});
+
+//popup end
