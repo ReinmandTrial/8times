@@ -62,3 +62,44 @@ $('.btn-registrations').on('click',function(){
 });
 
 //popup end
+// Выбор цвета 
+$('.product-color__body').on('click',function(){
+  var btn = $(this);
+  var items = btn.closest('.product-color').find('.product-color__body');
+  $(items).each(function(){
+    $(this).removeClass('active');
+  });
+  btn.addClass('active');
+})
+//Конец выбора цвета
+//select
+  $('.select-header').on('click',function(){
+    $(this).next().slideToggle('slow');
+    $(this).toggleClass('open');
+  });
+  $('.select-item').on('click',function(){
+    var select = $(this).closest('.select');
+    var headerText = select.find('.select-header__title');
+    var razmer = $(this).find('.select-item__size').text();
+    $(this).closest('.select-body').slideToggle('slow');
+    headerText.text('Размер ' + razmer);
+    select.find('.select-header').removeClass('open')
+    
+  })
+//end select
+
+//описание продукта
+$('.product-info__header').on('click',function(){
+  $(this).next().slideToggle('slow');
+  $(this).toggleClass('open');
+})
+//конец описания продукта 
+// slider-dost
+$('.slider-dots__item').on('click',function(){
+  var items = $(this).closest('.slider-dots').find('.slider-dots__item');
+  $(items).each(function(){
+    $(this).removeClass('active');
+  })
+  $(this).addClass('active');
+})
+//slider-dots end
