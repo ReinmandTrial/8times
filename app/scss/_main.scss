@@ -1,0 +1,85 @@
+body{
+    
+    font-family: 'Artegra Sans Extended Alt';
+    font-style: normal;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+/*     font-size: calc(22px + (54 - 22) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(20px + (84.53 - 20) * ((100vw - 320px) / (1920 - 320))); */
+.h1{
+    font-size: calc(22px + (54 - 22) * ((100vw - 320px) / (1920 - 320)));
+}
+wd
+.h3{
+    font-size: calc(36px + (200 - 36) * ((100vw - 320px) / (1920 - 320)));
+}
+.h4{
+    font-size: calc(32px + (74 - 32) * ((100vw - 320px) / (1920 - 320)));
+}
+
+
+
+.wrapper {
+    max-width: 1716px;
+    margin: 0 auto;
+}
+
+
+
+
+.header {
+
+		&__content {
+		}
+
+		&__line-top {
+            height: 210px;
+            display: flex;
+            justify-content: space-between;
+		}
+
+		&__nav-left {
+		}
+
+		&__link {
+            margin-right: 50px;
+
+		}
+
+		&__nav-right {
+		}
+
+		&__icon-box {
+		}
+}
+.burger-icon {
+    width: 55px;
+    height: 55px;
+    margin-right: 50px;
+    &::before, &::after{
+        content: '';
+        position: absolute;
+        left: 7.67px;
+        border: 3.83721px solid #858586;
+    }
+    &::before{
+        top: 20.46px;
+        width: 39.65px;
+    }
+    &::after{
+        width: 19.19px;
+        top: 40.93px;
+    }
+    & span{
+        content: '';
+        position: absolute;
+        width: 30.7px;
+        height: 0px;
+        left: 7.67px;
+        top: 30.7px;
+        border: 3.83721px solid #858586;
+    }
+}
+.logo {
+}
