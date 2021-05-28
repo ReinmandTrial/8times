@@ -1,10 +1,45 @@
-$color1: #202020;
-$color2: #858586;
-$white: #ffffff;
-$iconColor1: #AAAAA8;
-$iconColor2: #FF5252;
-$iconColor3: #F1F1F1;
-$iconColor4: #7E6A54;
-$black: #000000;
-$background1: #202020;
-$background2: #E3E3E3;
+@media (max-width: 1740px) {
+    .wrapper {
+        max-width: 1760px;
+        padding: 0px 22px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1399.98px) {
+    .footer__clients {
+        width: 410px;
+    }
+}
+@media (max-width: 1199.98px) {
+    .footer__clients {
+        width: 410px;
+    }
+    .footer__content{
+        padding: calc(67px + (162 - 67) * ((100vw - 320px) / (1920 - 320))) 0px 0px 0px;;
+    }
+    .footer__block{
+        flex: 0 1 50%;
+    }
+    .footer__contacts {
+        margin-right: 0px;
+    }
+    
+}
+@media (max-width: 991.98px){
+
+}
+@media (max-width: 767.98px) {
+    .footer__block{
+        flex: 0 1 100%;
+        margin: 0px 0px 40px 0px;
+    }
+    .footer__clients {
+        margin: 0px 0px 62px 0px;
+    }
+    .footer__contacts {
+        margin: 0px 0px 95px 0px;
+    }
+    .footer__link {
+        line-height: 157%;
+    }
+}
