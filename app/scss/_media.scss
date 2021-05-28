@@ -23,10 +23,40 @@
     .footer__contacts {
         margin-right: 0px;
     }
-    
+    .header__nav-right{
+        bottom: 0;
+        margin: 0;
+    }
 }
 @media (max-width: 991.98px){
-
+    /* Планшет */
+    .wrapper {
+        max-width: 1744px;
+        padding: 0px 14px;
+        margin: 0 auto;
+    }
+    .header{
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .header__links{
+        display: none;
+    }
+    .header__icon-box{
+        box-shadow: none;
+    }
+    .trends__img{
+        right: -40px;
+        & img{
+            opacity: 0.2;
+        }
+    }
+    .trends::before{
+        right: 0;
+        width: 100%;
+    }
+    .products-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media (max-width: 767.98px) {
     .footer__block{
@@ -41,5 +71,44 @@
     }
     .footer__link {
         line-height: 157%;
+    }
+}
+@media (max-width: 575.98px) {
+    .trends__button{
+        align-self: flex-end;
+    }
+    .page-catalog__content{
+        display: block;
+    }
+    .products-grid__img{
+        margin-bottom: 10px;
+    }
+    .sidebar__item a{
+        margin: 0px 5px 0px 0px;
+        padding: 6px 7px;
+        border: 1px solid $color2;
+        border-radius: 90.1961px;
+    }
+    .sidebar ul{
+        display: flex;
+        margin-bottom: 20px;
+        overflow-x: scroll;
+        overflow-y: visible;
+    }
+    .sidebar ul li{
+        flex: 1 0 auto;
+        padding: 7px 0px;
+    }
+    .products-grid{
+        margin: 0px -14px calc(70px + (95 - 70) * ((100vw - 320px) / (1920 - 320))) -14px;
+    }
+    .products-grid__dscr{
+        justify-content: flex-start;
+        display: block;
+        
+    }
+    .products-grid__dscr a{
+        display: block;
+        margin: 0px 0px 0px 7px;
     }
 }

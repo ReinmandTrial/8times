@@ -8,6 +8,8 @@ $iconColor4: #7E6A54;
 $black: #000000;
 $background1: #202020;
 $background2: #E3E3E3;
+$background3: #F1F1F1;
+
 
 html{
     overflow-x: hidden;
@@ -48,6 +50,9 @@ body{
 }
 
 
+/* page.html START*/
+
+
 .icon-footer-facebook{
     font-size: 30px;
     color: black;
@@ -56,7 +61,7 @@ body{
 .header {
 
 		&__content {
-            height: 210px;
+            height: calc(56px + (210 - 56) * ((100vw - 320px) / (1920 - 320)));
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -98,9 +103,6 @@ body{
             border-radius: 50%;
             background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            & span{
-
-            }
 		}
 }
 .burger-icon {
@@ -152,241 +154,6 @@ body{
     }
 
 }
-
-.footer {
-    background: #202020;
-    position: relative;
-    &::after{
-        content: '';
-        position: absolute;
-        bottom: 41px;
-        width: 100%;
-        height: 1px;
-        background: #000000;
-    }
-    &__content {
-        padding: 162px 0px 0px 45px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__block{
-        padding: 0px 20px 0px 0px;
-        margin: 0px 0px 62px 0px;
-    }
-
-    &__about {
-        /* width: calc(200px + (494 - 200) * ((100vw - 320px) / (1920 - 320))); */
-        flex: 1 1 250px;
-        & ul {
-            margin-bottom: 15px;
-        }
-        & a{
-            margin-right: 5px;
-            display: inline-block;
-        }
-    }
-
-    &__catalog {
-        /* width: calc(200px + (452 - 200) * ((100vw - 320px) / (1920 - 320))); */
-        flex: 1 1 250px;
-    }
-
-    &__clients {
-        /* width: calc(430px + (463 - 430) * ((100vw - 320px) / (1920 - 320))); */
-        width: 463px;
-
-    }
-
-    &__contacts {
-        width: 260px;
-        margin-right: 10px;
-    }
-    
-    &__title{
-        font-size: 22px;
-        line-height: 78%;
-        color: #ffffff;
-        margin: 0px 0px 37px 0px;
-    }
-    &__link{
-        font-size: 20px;
-        line-height: 210%;
-        color: $color2;
-    }
-    &__adress{
-        font-size: 20px;
-        line-height: 210%;
-        color: $color2;
-
-    }
-    &__mail{
-        font-size: 20px;
-        line-height: 210%;
-        color: $color2;
-        margin-bottom: 20px;
-    }
-
-    &__line-bottom {
-        width: 100%;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__lang {
-        display: flex;
-        margin: 0px 0px 0px 45px;
-        & p{
-            line-height: 20px;
-            font-size: 20px;
-            color: $color2;
-        }
-    }
-
-    &__license {
-        font-size: 20px;
-        color: $color2;
-    }
-}
-.products-row {
-    margin: 0px 0px 63px 0px;
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 25px;
-    }
-
-    &__title {
-    }
-
-    &__more {
-        & span{
-            margin-left: 15px;
-        }
-    }
-
-    &__container {
-        display: flex;
-        margin: 0px -10px;
-        position: relative;
-    }
-
-    &__product {
-        width: calc(100% / 5 - 20px);
-        margin: 0px 10px;
-    }
-
-    &__img {
-        width: 100%;
-        height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
-        position: relative;
-        margin-bottom: 25px;
-        border-radius: 7px;
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        & span{
-            position: absolute;
-            top: 12.5px;
-            right: 12.5px;
-
-        }
-    }
-
-    &__name {
-        font-size: calc(10px + (24 - 10) * ((100vw - 320px) / (1920 - 320)));
-        line-height: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
-    }
-
-    &__price {
-        font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
-        line-height: calc(15px + (36 - 15) * ((100vw - 320px) / (1920 - 320)));
-        font-weight: 700;
-    }
-    &__button{
-        position: absolute;
-        right: -16.5px;
-        top: calc(42% - 26.5px);
-        background: rgba(170, 170, 168, 0.6);
-        width: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
-        height: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
-        border-radius: 50%;
-    }
-}
-.page-main {
-
-    &__container {
-        padding: calc(22px + (53 - 22) * ((100vw - 320px) / (1920 - 320))) 0px calc(45px + (119 - 45) * ((100vw - 320px) / (1920 - 320))) 0px;
-    }
-
-    &__button {
-        width: 82px;
-        height: 82px;
-        background: $iconColor3;
-        border-radius: 50%;
-        margin: 10px;
-        &-box{
-            display: flex;
-            justify-content: center;
-        }
-    }
-    
-}
-.trends {
-    padding: calc(42px + (292 - 42) * ((100vw - 320px) / (1920 - 320))) calc(21px + (200 - 21) * ((100vw - 320px) / (1920 - 320))) calc(29px + (221 - 29) * ((100vw - 320px) / (1920 - 320))) calc(0px + (41 - 0) * ((100vw - 320px) / (1920 - 320)));
-    
-    position: relative;
-    &__title {
-        font-size: calc(36px + (200 - 36) * ((100vw - 320px) / (1920 - 320)));
-        font-weight: 800;
-        margin-bottom: calc(10px + (60 - 10) * ((100vw - 320px) / (1920 - 320)));
-        position: relative;
-        z-index: 10;
-    }
-
-    &__text {
-        font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
-        color: $color2;
-        line-height: 210%;
-        max-width: 650px;
-        margin-bottom: calc(16px + (46 - 16) * ((100vw - 320px) / (1920 - 320)));
-        position: relative;
-        z-index: 5;
-    }
-
-    &__button {
-        width: calc(140px + (415 - 140) * ((100vw - 320px) / (1920 - 320)));
-        height: calc(37px + (102 - 37) * ((100vw - 320px) / (1920 - 320)));
-        background-color: transparent;
-        border: 2.61538px solid $color1;
-        border-radius: 55px;
-        font-size: calc(10px + (29 - 10) * ((100vw - 320px) / (1920 - 320)));
-        position: relative;
-        z-index: 5;
-    }
-
-    &__img {
-        height: 100%;
-        width: calc(250px + (1100 - 250) * ((100vw - 320px) / (1920 - 320)));
-        position: absolute;
-        top: 0;
-        right: calc(-43px + (-102 + 43) * ((100vw - 320px) / (1920 - 320)));
-        z-index: 1;
-        & img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-    }   
-}
-
-
-
 .footer {
     background: #202020;
     position: relative;
@@ -469,6 +236,7 @@ body{
     }
 
     &__lang {
+        align-items: center;
         display: flex;
         & p{
             line-height: 20px;
@@ -484,9 +252,275 @@ body{
 }
 
 
+/* page.html END */
+
+/* index.html START*/
 
 
-/* Не применяется h */
-/* hr сбрасывает стили */
-/* Отображение картинки  на trends */
-/* header адаптив */    
+.products-row {
+    
+    margin: 0px 0px 63px 0px;
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    &__title {
+    }
+
+    &__more {
+        & span{
+            margin-left: 15px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        margin: 0px -10px;
+        position: relative;
+    }
+
+    &__product {
+        width: calc(100% / 5 - 20px);
+        margin: 0px 10px;
+        & > a{
+            display: block;
+        }
+    }
+
+    &__img {
+        max-width: calc(132px + (327 - 132) * ((100vw - 320px) / (1920 - 320)));
+        max-height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
+        position: relative;
+        margin-bottom: 25px;
+        border-radius: 7px;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        & span{
+            position: absolute;
+            top: 12.5px;
+            right: 12.5px;
+        }
+    }
+
+    &__name {
+        font-size: calc(10px + (24 - 10) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    &__price {
+        font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(15px + (36 - 15) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 700;
+    }
+    &__button{
+        position: absolute;
+        right: -16.5px;
+        top: calc(42% - 26.5px);
+        background: rgba(170, 170, 168, 0.6);
+        width: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
+        height: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
+        border-radius: 50%;
+    }
+}
+.page-main {
+
+    &__container {
+        padding: calc(22px + (53 - 22) * ((100vw - 320px) / (1920 - 320))) 0px calc(45px + (119 - 45) * ((100vw - 320px) / (1920 - 320))) 0px;
+    }
+
+    &__button {
+        width: 82px;
+        height: 82px;
+        background: $iconColor3;
+        border-radius: 50%;
+        margin: 10px;
+        &-box{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}
+.trends {
+    display: flex;
+    flex-direction: column;
+    margin: 0px -14px;
+    padding: calc(42px + (292 - 42) * ((100vw - 320px) / (1920 - 320))) calc(35px + (214 - 35) * ((100vw - 320px) / (1920 - 320))) calc(29px + (221 - 29) * ((100vw - 320px) / (1920 - 320))) calc(14px + (55 - 14) * ((100vw - 320px) / (1920 - 320)));
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -102px;
+        height: 100%;
+        width: calc(57.3% + 102px);
+        background: $background3;
+    }
+    position: relative;
+    &__title {
+        font-size: calc(36px + (200 - 36) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 800;
+        margin-bottom: calc(10px + (60 - 10) * ((100vw - 320px) / (1920 - 320)));
+        position: relative;
+        z-index: 10;
+    }
+
+    &__text {
+        font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
+        color: $color2;
+        line-height: 210%;
+        max-width: 650px;
+        margin-bottom: calc(16px + (46 - 16) * ((100vw - 320px) / (1920 - 320)));
+        position: relative;
+        z-index: 5;
+    }
+
+    &__button {
+        align-self: flex-start;
+        padding: calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320))) calc(45px + (135 - 45) * ((100vw - 320px) / (1920 - 320))) calc(10px + (35 - 10) * ((100vw - 320px) / (1920 - 320)))calc(45px + (135 - 45) * ((100vw - 320px) / (1920 - 320)));
+        background-color: transparent;
+        border: 2.61538px solid $color1;
+        border-radius: 55px;
+        font-size: calc(10px + (29 - 10) * ((100vw - 320px) / (1920 - 320)));
+        position: relative;
+        z-index: 5;
+    }
+
+    &__img {
+        height: 100%;
+        width: calc(250px + (1100 - 250) * ((100vw - 320px) / (1920 - 320)));
+        position: absolute;
+        top: 0;
+        right: -102px;
+        z-index: 1;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+    }   
+}
+
+
+/* index.html END */
+
+/* catalog.html START */
+
+
+.page-catalog {
+
+		&__content {
+            display: flex;
+            padding: calc(37px + (97 - 37) * ((100vw - 320px) / (1920 - 320))) 0px calc(89px + (159 - 89) * ((100vw - 320px) / (1920 - 320))) 0px;
+		}
+}
+
+.sidebar {
+    flex: 0 1 calc(250px + (325 - 250) * ((100vw - 320px) / (1920 - 320)));
+    &__title {
+        font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 700;
+        margin-bottom: calc(20px + (80 - 20) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    &__item {
+
+        & a{
+            font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1920 - 320)));
+            line-height: calc(14px + (60 - 14) * ((100vw - 320px) / (1920 - 320)));
+            color: $color1;
+        }
+    }
+}
+.products-grid {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: calc(2px + (21 - 2) * ((100vw - 320px) / (1920 - 320)));
+    grid-row-gap: 40px;
+    grid-auto-flow: row;
+    margin-bottom: calc(70px + (95 - 70) * ((100vw - 320px) / (1920 - 320)));
+    &__item {
+        position: relative;
+    }
+
+    &__img {
+        /* max-width: calc(159px + (440 - 159) * ((100vw - 320px) / (1920 - 320)));
+        max-height: calc(229px + (566 - 229) * ((100vw - 320px) / (1920 - 320))); */
+        position: relative;
+        border-radius: 7px;
+        margin-bottom: 20px;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        & span{
+            position: absolute;
+            top: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
+            right: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+    &__icon{
+        font-size: calc(17px + (32 - 17) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    &__dscr {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(14px + (26 - 14) * ((100vw - 320px) / (1920 - 320)));
+        color: $color1;
+    }
+
+    &__price {
+        font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 700;
+        color: $color1;
+    }
+    &__button-box{
+        display: flex;
+        justify-content: center;
+        
+    }
+    &__button{
+        padding: 12px 90px;
+        background: $color1;
+        border-radius: 150px;
+        color: $white;
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Карточка кликабельная */
+/* ссылки на картинки */
+/* цвета ссылок */
+
+
