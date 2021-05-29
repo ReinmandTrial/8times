@@ -84,7 +84,7 @@
         margin-bottom: 10px;
     }
     .sidebar__item a{
-        margin: 0px 5px 0px 0px;
+        margin: 2px 5px 2px 0px;
         padding: 6px 7px;
         border: 1px solid $color2;
         border-radius: 90.1961px;
@@ -97,7 +97,7 @@
     }
     .sidebar ul li{
         flex: 1 0 auto;
-        padding: 7px 0px;
+        padding: 8px 0px;
     }
     .products-grid{
         margin: 0px -14px calc(70px + (95 - 70) * ((100vw - 320px) / (1920 - 320))) -14px;
@@ -110,5 +110,40 @@
     .products-grid__dscr a{
         display: block;
         margin: 0px 0px 0px 7px;
+    }
+    .page-login__content{
+        align-items: flex-end;
+    }
+    .input{
+        margin-bottom: 18px;
+    }
+    .login {
+		&__form {
+            border-radius: 7px 7px 0px 0px;
+            font-size: 14px;
+            line-height: 20px;
+		}
+
+		&__title {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 30px;
+		}
+
+		&__input-email {
+		}
+
+        &__input-pass {
+            margin-bottom: unset;
+		}
+
+		&__restore {
+            margin: 26px 0px;
+		}
+
+		&__button {
+            font-size: 14px;
+            margin-bottom: 12.5px;
+		}
     }
 }
