@@ -119,19 +119,21 @@ footer {
 		}
 
 		&__nav-right {
+            display: flex;
+            align-items: center;
             position: relative;
             bottom: 20px;
-            display: flex;
             margin: 0px 46.5px 0px 0px;
             z-index: 2;
 		}
 
 		&__icon-box {
+            display: inline-block;
             position: relative;
             z-index: 4;
-            padding: 10px 0px 0px 0px;
-            text-align: center;
+            display: flex;
             align-items: center;
+            justify-content: center;
             width: 50px;
             height: 50px;
             margin: 0px 0px 0px 10px;
@@ -278,8 +280,6 @@ footer {
 /* page.html END */
 
 /* index.html START*/
-
-
 .products-row {
     
     margin: 0px 0px 63px 0px;
@@ -290,39 +290,23 @@ footer {
         margin-bottom: 25px;
     }
 
-    &__title {
-    }
-
     &__more {
         & span{
             margin-left: 15px;
         }
     }
-
     &__container {
         display: flex;
         margin: 0px -10px;
         position: relative;
         overflow-x: visible;
         flex-wrap: nowrap;
-        
+        min-width: 0;
     }
-
-    &__product {
+    &__item {
+        position: relative;
         min-width: calc(100% / 5 - 20px);
         margin: 0px 10px;
-    }
-
-    &__img {
-        height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
-        position: relative;
-        margin-bottom: 25px;
-        border-radius: 7px;
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         & span{
             z-index: 2;
             position: absolute;
@@ -330,26 +314,93 @@ footer {
             right: 12.5px;
         }
     }
-
+    &__img {
+        width: 100%;
+        height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: 25px;
+        border-radius: 7px;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     &__name {
         line-height: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
     }
 
     &__price {
         font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
-        line-height: calc(15px + (36 - 15) * ((100vw - 320px) / (1920 - 320)));
         font-weight: 700;
     }
     &__button{
-        position: absolute;
-        right: -16.5px;
-        top: calc(40% - 26.5px);
+        
         background: rgba(170, 170, 168, 0.6);
         width: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
         height: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
         border-radius: 50%;
     }
+    
+} 
+
+/* 
+.products-row {
+    
+    margin: 0px 0px 63px 0px;
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    &__more {
+        & span{
+            margin-left: 15px;
+        }
+    }
+    &__container {
+    }
+    &__item {
+        max-width: 100%;
+        position: relative;
+        & span{
+            z-index: 2;
+            position: absolute;
+            top: 12.5px;
+            right: 12.5px;
+        }
+    }
+    &__img {
+        height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: 25px;
+        border-radius: 7px;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__name {
+        line-height: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    &__price {
+        font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 700;
+    }
+    &__button{
+        
+        background: rgba(170, 170, 168, 0.6);
+        width: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
+        height: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
+        border-radius: 50%;
+    }
+    
 }
+
+ */
+
 .page-main {
 
     &__container {
@@ -612,7 +663,7 @@ footer {
 /* login.html END */
 
 
-/* login.html START */
+/* reg.html START */
 
 
 
@@ -676,7 +727,7 @@ footer {
 }
 
 
-/* login.html END */
+/* reg.html END */
 
 
 
@@ -786,6 +837,7 @@ footer {
     &__size-header{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background: $background3;
         border-radius: 55px;
         padding: 17px 16px 17px 21px;
@@ -816,32 +868,31 @@ footer {
     }
 
     &__button {
-        padding: 13px 21px;
+        padding: 13px 30px;
         background: $color1;
         border-radius: 55px;
         color: $white;
-        margin-right: 10px;
     }
     &__button-box{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 60px;
-        .icon-footer-facebook{
-            font-size: 25px;
-        }
-        & a{
-            display: inline-block;
-        }
-    }
-    .icon-footer-facebook_border{
         display: inline-block;
+        margin-bottom: 10px;
+        
+    }
+    .icon-footer-facebook{
+        font-size: 25px;
+    }
+    .icon-footer-facebook-link{
+        display: inline-block;
+        margin: 0px 0px 0px 15px;
         width: 51px;
         height: 51px;
         padding: 11px;
         border: 1.5px solid $color1;
         border-radius: 50%;
         text-align: center;
+    }
+    &__item-box{
+        margin-top: 50px;
     }
     &__item{
         border-bottom: 1.5px solid $black;
@@ -867,6 +918,9 @@ footer {
     &__item-text{
         margin: 10px 0px 15px 0px;
         line-height: 24px;
+    }
+    .products-row{
+        display: none;
     }
 }
 
