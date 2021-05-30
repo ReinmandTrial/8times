@@ -3,9 +3,9 @@ const { default: Swiper } = require("swiper");
 $(function () {
 
 });
-new Swiper('.swiper-container', {
+new Swiper('.container', {
     navigation: {
-        nextEl: '.products-row__button',
+        nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
     },
     slidesPerView: 5,
