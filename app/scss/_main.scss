@@ -20,7 +20,6 @@ body{
     font-weight: normal;
     line-height: 0.86;
     font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1920 - 320)));
-   
     overflow-x: hidden;
     color: $color1;
 }
@@ -93,6 +92,7 @@ footer {
     text-decoration: underline;
 }
 
+
 .header {
 
 		&__content {
@@ -140,39 +140,16 @@ footer {
             border-radius: 50%;
             background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 20px;
 		}
 }
-.burger-icon {
-    width: 55px;
-    height: 55px;
-    margin-right: 50px;
+.icon-burger{
+    padding: 10px 10px 10px 0px;
+    color: $color2;
     position: relative;
-    &::before, &::after{
-        content: '';
-        position: absolute;
-        left: 7.67px;
-        height: 4px;
-        background: $color2;
-        border-radius: 3px;
-    }
-    &::before{
-        top: 17px;
-        width: 39.65px;
-    }
-    &::after{
-        width: 19.19px;
-        top: 37px;
-    }
-    & span{
-        content: '';
-        position: absolute;
-        width: 30.7px;
-        height: 4px;
-        left: 7.67px;
-        top: 27px;
-        background: $color2;
-        border-radius: 3px;
-    }
+    top: 2px;
+    font-size: 20px;
+
 }
 .burger{
     display: none;
@@ -205,6 +182,10 @@ footer {
 
 }
 .footer {
+    .icon-facebook, .icon-instagram{
+        color: $iconColor3;
+        font-size: 38px;
+    }
     background: #202020;
     position: relative;
     &::after{
@@ -284,6 +265,10 @@ footer {
         & p{
             line-height: 20px;
         }
+        .icon-lang{
+            font-size: 26px;
+            margin-right: 10px;
+        }
     }
 }
 
@@ -291,10 +276,75 @@ footer {
 /* page.html END */
 
 /* index.html START*/
+// .products-row {
+    
+//     margin: 0px 0px 63px 0px;
+    
+//     &__header {
+//         display: flex;
+//         justify-content: space-between;
+//         margin-bottom: 25px;
+//     }
+
+//     &__more {
+//         & span{
+//             margin-left: 15px;
+//         }
+//     }
+//     &__container {
+//         display: flex;
+//         margin: 0px -10px;
+//         position: relative;
+//         overflow-x: visible;
+//         flex-wrap: nowrap;
+//         min-width: 0;
+//     }
+//     &__item {
+//         position: relative;
+//         min-width: calc(100% / 5 - 20px);
+//         margin: 0px 10px;
+//         & span{
+//             z-index: 2;
+//             position: absolute;
+//             top: 12.5px;
+//             right: 12.5px;
+//         }
+//     }
+//     &__img {
+//         width: 100%;
+//         height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
+//         margin-bottom: 25px;
+//         border-radius: 7px;
+//         & img {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: cover;
+//         }
+//     }
+//     &__name {
+//         line-height: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
+//     }
+
+//     &__price {
+//         font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
+//         font-weight: 700;
+//     }
+//     &__button{
+        
+//         background: rgba(170, 170, 168, 0.6);
+//         width: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
+//         height: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
+//         border-radius: 50%;
+//     }
+    
+// } 
+
+.swiper-slide{
+    width: unset;
+}
 .products-row {
-    
     margin: 0px 0px 63px 0px;
-    
+    position: relative;
     &__header {
         display: flex;
         justify-content: space-between;
@@ -306,18 +356,8 @@ footer {
             margin-left: 15px;
         }
     }
-    &__container {
-        display: flex;
-        margin: 0px -10px;
-        position: relative;
-        overflow-x: visible;
-        flex-wrap: nowrap;
-        min-width: 0;
-    }
     &__item {
         position: relative;
-        min-width: calc(100% / 5 - 20px);
-        margin: 0px 10px;
         & span{
             z-index: 2;
             position: absolute;
@@ -326,12 +366,11 @@ footer {
         }
     }
     &__img {
-        width: 100%;
+        width: calc(132px + (327 - 132) * ((100vw - 320px) / (1920 - 320)));
         height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
         margin-bottom: 25px;
         border-radius: 7px;
         & img {
-            width: 100%;
             height: 100%;
             object-fit: cover;
         }
@@ -345,63 +384,9 @@ footer {
         font-weight: 700;
     }
     &__button{
-        
-        background: rgba(170, 170, 168, 0.6);
-        width: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
-        height: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
-        border-radius: 50%;
-    }
-    
-} 
+        position: absolute;
 
-/* 
-.products-row {
-    
-    margin: 0px 0px 63px 0px;
-    
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 25px;
-    }
 
-    &__more {
-        & span{
-            margin-left: 15px;
-        }
-    }
-    &__container {
-    }
-    &__item {
-        max-width: 100%;
-        position: relative;
-        & span{
-            z-index: 2;
-            position: absolute;
-            top: 12.5px;
-            right: 12.5px;
-        }
-    }
-    &__img {
-        height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
-        margin-bottom: 25px;
-        border-radius: 7px;
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    &__name {
-        line-height: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
-    }
-
-    &__price {
-        font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (1920 - 320)));
-        font-weight: 700;
-    }
-    &__button{
-        
         background: rgba(170, 170, 168, 0.6);
         width: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
         height: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
@@ -410,23 +395,30 @@ footer {
     
 }
 
- */
+
 
 .page-main {
 
     &__container {
         padding: calc(22px + (53 - 22) * ((100vw - 320px) / (1920 - 320))) 0px calc(45px + (119 - 45) * ((100vw - 320px) / (1920 - 320))) 0px;
     }
-
+    &__button-box{
+        display: flex;
+        justify-content: center;
+    }
     &__button {
         width: 82px;
         height: 82px;
         background: $iconColor3;
         border-radius: 50%;
         margin: 10px;
-        &-box{
-            display: flex;
-            justify-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & span{
+            position: relative;
+            top: 1px;
+            font-size: 12px;
         }
     }
     
@@ -530,11 +522,19 @@ footer {
         width: 100%;
         position: relative;
         overflow-y: hidden;
+        .active{
+            .icon-heart{
+                background: $iconColor3;
+            }
+        }
+    }
+    &__icon{
+        position: absolute;
+        top: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
+        right: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
+        z-index: 2;
         & span{
-            position: absolute;
-            top: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
-            right: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
-            z-index: 2;
+
         }
     }
 
@@ -603,6 +603,21 @@ footer {
 /* login.html START */
 
 
+.close{
+    position: absolute;
+    right: 13px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+    background: $iconColor3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & span{
+        font-size: 10px;
+    }
+}
 .input{
     font-family: 'Artegra Sans Extended Alt';
     font-style: normal;
@@ -619,9 +634,10 @@ footer {
 .page-login {
 
 		&__content {
+            position: relative;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             
             padding: 100px 0px 200px 0px;
 		}
@@ -690,12 +706,6 @@ footer {
 		}
 }
 .reg {
-        &__back{
-            position: absolute;
-            top: calc(13px + (22 - 13) * ((100vw - 320px) / (1920 - 320)));
-            right: calc(13px + (22 - 13) * ((100vw - 320px) / (1920 - 320)));
-
-        }    
 		&__form {
             padding: 30px 0px;
             width: 520px;
@@ -758,11 +768,15 @@ footer {
     }
 
     &__back{
-        flex: 0 1 auto;
+        align-self:flex-start;
         display: flex;
+        align-items: center;
+        position: relative;
+        flex: 0 1 auto;
         color: $color2;
         margin-right: calc(0px + (160 - 0) * ((100vw - 768px) / (1920 - 768)));
         & span{
+            font-size: 20px;
             margin-right: 6px;
         }
     }
@@ -853,8 +867,8 @@ footer {
         border-radius: 55px;
         padding: 17px 16px 17px 21px;
         cursor: pointer;
-        .icon-footer-facebook{
-            font-size: 16px;
+        .icon-triangle-down{
+            font-size: 12px;
         }
     }
     &__size-title{
@@ -890,18 +904,22 @@ footer {
         margin-bottom: 10px;
         
     }
-    .icon-footer-facebook{
-        font-size: 25px;
-    }
-    .icon-footer-facebook-link{
+    .icon-heart-box{
         display: inline-block;
+    }
+    .icon-heart{
+        font-size: 22px;
+    }
+    .icon-heart-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0px 0px 0px 15px;
         width: 51px;
         height: 51px;
         padding: 11px;
         border: 1.5px solid $color1;
         border-radius: 50%;
-        text-align: center;
     }
     &__item-box{
         margin-top: 50px;
@@ -923,8 +941,7 @@ footer {
         display: flex;
         justify-content: space-between;
         font-weight: 700;
-        .icon-footer-facebook{
-            font-size: 18px;
+        & span{
         }
     }
     &__item-text{
@@ -940,8 +957,4 @@ footer {
 /* product.html END */
 
 
-
-
-/* Как использовать transperent на кругах */
-/* стр Товар Иконка "Избранное уезжает" */
-
+/* Страницы регистрации и входа, положение кнопки назад */

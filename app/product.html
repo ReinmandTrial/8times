@@ -10,11 +10,12 @@
 
 <body>
 
+    <!-- HEADER start -->
     <header class="header">
         <div class="wrapper">
             <div class="header__content">
                 <div class="header__nav-left">
-                    <a class="burger-icon">
+                    <a class="icon icon-burger btn-burger">
                         <span></span>
                     </a>
                     <nav class="header__links">
@@ -30,26 +31,31 @@
                 </div>
                 <div class="header__nav-right">
                     <a href="#" class="header__icon-box left">
-                        <span class="icon icon-footer-facebook"></span>
+                        <span class="icon icon-search"></span>
                     </a>
                     <a href="#" class="header__icon-box">
-                        <span class="icon icon-footer-facebook"></span>
+                        <span class="icon icon-heart"></span>
                     </a>
                     <a href="#" class="header__icon-box">
-                        <span class="icon icon-footer-facebook"></span>
+                        <span class="icon icon-bag"></span>
                     </a>
                 </div>
             </div>
         </div>
     </header>
+    <!-- HEADER end -->
 
+    <!-- PAGE PRODUCT start -->
     <section class="page-product">
         <div class="wrapper">
             <div class="page-product__content">
                 <div class="page-product__container">
-                    <a href="#" class="page-product__back h6"><span class="icon icon-triangle-left"></span>
+                    <a href="#" class="page-product__back h6">
+                        <span class="icon icon-triangle-left"></span>
                         <p>Назад</p>
                     </a>
+
+                    <!-- SLIDER start -->
                     <div class="page-product__images_small">
                         <img src="images/page-product-small-img.png" alt="">
                         <img src="images/page-product-small-img.png" alt="">
@@ -59,6 +65,9 @@
                     <div class="page-product__image_large">
                         <img src="images/page-product-img.png" alt="">
                     </div>
+                    <!-- SLIDER end -->
+
+                    <!-- SETTINGS start -->
                     <div class="page-product__sett">
                         <p class="page-product__name">Рубашка синяя</p>
                         <p class="page-product__price">5 290 ₽</p>
@@ -124,24 +133,26 @@
                             <button class="page-product__button h9">Добавить в корзину</button>
                         </div>
 
-                        <a href="#" class="icon-footer-facebook-link">
-                            <span class="icon icon-heart"></span>
-                        </a>
+                        <div class="icon-heart-box">
+                            <a href="#" class="icon-heart-link">
+                                <span class="icon icon-heart"></span>
+                            </a>
+                        </div>
 
                         <div class="page-product__item-box h9">
                             <div class="page-product__item">
-                                <p class="page-product__item-title">Детали<span
-                                        class="icon icon-triangle-down"></span></p>
+                                <p class="page-product__item-title">Детали<span class="icon icon-triangle-right"></span>
+                                </p>
                                 <p class="page-product__item-text num1"></p>
                             </div>
                             <div class="page-product__item">
-                                <p class="page-product__item-title">Обмеры<span
-                                    class="icon icon-triangle-down"></span></p>
+                                <p class="page-product__item-title">Обмеры<span class="icon icon-triangle-right"></span>
+                                </p>
                                 <p class="page-product__item-text num2"></p>
                             </div>
                             <div class="page-product__item">
                                 <p class="page-product__item-title">Описание<span
-                                    class="icon icon-triangle-down"></span></p>
+                                        class="icon icon-triangle-right"></span></p>
                                 <p class="page-product__item-text num3">Мюли на широком скошенном каблуке. Выполнены из
                                     натуральной фактурной кожи, устойчивой к царапинам и потертостям. Гибкая подошва не
                                     скользит, а устойчивый каблук помогает чувствовать себя комфортно в течение дня.ивый
@@ -150,7 +161,11 @@
                             </div>
                         </div>
                     </div>
+                    <!-- SETTINGS end -->
+
                 </div>
+
+                <!-- SLIDER start -->
                 <div class="products-row">
                     <div class="products-row__header">
                         <p class="products-row__title h5">Вам может понравиться</p>
@@ -224,12 +239,15 @@
                         </a>
                     </div>
                 </div>
+                <!-- SLIDER end -->
+
             </div>
         </div>
     </section>
+    <!-- PAGE PRODUCT end -->
 
+    <!-- FOOTER start -->
     <footer class="footer">
-<<<<<<< HEAD
         <div class="wrapper">
             <div class="footer__content">
                 <div class="footer__about footer__block">
@@ -238,8 +256,8 @@
                         <li><a href="#" class="footer__link h7">О нас</a></li>
                         <li><a href="#" class="footer__link h7">Написать нам</a></li>
                     </ul>
-                    <a href="#" class="icon icon-footer-facebook"></a>
-                    <a href="#" class="icon icon-footer-facebook"></a>
+                    <a href="#" class="icon icon-instagram"></a>
+                    <a href="#" class="icon icon-facebook"></a>
                 </div>
                 <div class="footer__catalog footer__block">
                     <p class="footer__title">Каталог</p>
@@ -261,14 +279,13 @@
                 <div class="footer__contacts footer__block">
                     <p class="footer__title">Контакты</p>
                     <p class="footer__adress footer__link h7">адрес: г. Пермь, ул. Революции 20</p>
-                    <a href="" class="footer__link h7 footer__mail">gkp30@mail.ru</a>
                     <a href="#" class="footer__link h7 footer__mail">gkp30@mail.ru</a>
                     <a class="footer__link-app" href="#"><img src="images/appstore.svg" alt=""></a>
                     <a class="footer__link-app" href="#"><img src="images/gplay.svg" alt=""></a>
                 </div>
                 <div class="footer__line-bottom h7">
                     <a href="#" class="footer__lang">
-                        <span class="icon icon-footer-facebook"></span>
+                        <span class="icon icon-lang"></span>
                         <p>English</p>
                     </a>
                     <p class="footer__license">8times, 2021</p>
@@ -276,55 +293,8 @@
             </div>
         </div>
     </footer>
+    <!-- FOOTER end -->
     <script src="js/main.min.js"></script>
-=======
-		<div class="wrapper">
-			<div class="footer__content">
-				<div class="footer__about footer__block">
-					<p class="footer__title">8times</p>
-					<ul>
-						<li><a href="#" class="footer__link h7">О нас</a></li>
-						<li><a href="#" class="footer__link h7">Написать нам</a></li>
-					</ul>
-					<a href="#" class="icon icon-facebook"></a>
-					<a href="#" class="icon icon-instagram"></a>
-				</div>
-				<div class="footer__catalog footer__block">
-					<p class="footer__title">Каталог</p>
-					<ul>
-						<li><a href="#" class="footer__link h7">Одежда</a></li>
-						<li><a href="#" class="footer__link h7">Новинки</a></li>
-						<li><a href="#" class="footer__link h7">Sale</a></li>
-					</ul>
-				</div>
-				<div class="footer__clients footer__block">
-					<p class="footer__title">Клиентам</p>
-					<ul>
-						<li><a href="#" class="footer__link h7">Доставка</a></li>
-						<li><a href="#" class="footer__link h7">Обмен и возврат</a></li>
-						<li><a href="#" class="footer__link h7">Пользовательское соглашение</a></li>
-						<li><a href="#" class="footer__link h7">Политика конфиденциальности</a></li>
-					</ul>
-				</div>
-				<div class="footer__contacts footer__block">
-					<p class="footer__title">Контакты</p>
-					<p class="footer__adress footer__link h7">адрес: г. Пермь, ул. Революции 20</p>
-					<a href="#" class="footer__link h7 footer__mail">gkp30@mail.ru</a>
-					<a class="footer__link-app" href="#"><img src="images/appstore.svg" alt=""></a>
-					<a class="footer__link-app" href="#"><img src="images/gplay.svg" alt=""></a>
-				</div>
-				<div class="footer__line-bottom h7">
-					<a href="#" class="footer__lang">
-						<span class="icon icon-lang"></span>
-						<p>English</p>
-					</a>
-					<p class="footer__license">8times, 2021</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
->>>>>>> f6fcb5bfb93767571a1ecb6f1776a51ac4aa1aa1
 </body>
 
 </html>

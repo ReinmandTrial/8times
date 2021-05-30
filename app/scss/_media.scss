@@ -71,6 +71,8 @@
     }
     .header__icon-box{
         box-shadow: none;
+        font-size: 18px;
+        color: $color2;
     }
     
     .products-row__container{
@@ -142,7 +144,7 @@
     .page-product__button{
         margin: 0;
     }
-    .page-product .icon-footer-facebook-link{
+    .page-product .icon-heart-link{
         border: none;
         padding: 0;
         width: unset;
@@ -165,6 +167,13 @@
     }
     .footer__link {
         line-height: 157%;
+    }
+    .page-main__button{
+        width: 45px;
+        height: 45px;
+        & span{
+            font-size: 8px;
+        }
     }
 }
 @media (max-width: 575.98px) {
