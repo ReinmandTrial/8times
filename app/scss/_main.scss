@@ -9,11 +9,8 @@ $black: #000000;
 $background1: #202020;
 $background2: #E3E3E3;
 $background3: #F1F1F1;
-
-
 html{
     overflow-x: hidden;
-
 }
 body{
     
@@ -21,6 +18,8 @@ body{
     font-style: normal;
     font-weight: normal;
     line-height: 0.86;
+    font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(14px + (26 - 14) * ((100vw - 320px) / (1920 - 320)));
     overflow-x: hidden;
     color: $color1;
 }
@@ -38,7 +37,20 @@ body{
 .h5{
     font-size: calc(16px + (32 - 16) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(23px + (45 - 23) * ((100vw - 320px) / (1920 - 320)));
-    color: $color1;
+}
+.h6{
+    font-size: calc(10px + (24 - 10) * ((100vw - 320px) / (1920 - 320)));
+}
+.h7{
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+    color: $color2;
+}
+.h8{
+    font-size: 16px;
+}
+.h9{
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+
 }
 
 
@@ -80,9 +92,7 @@ body{
 
 		&__link{
             padding: 15px;
-            font-size: calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
             margin-right: 20px;
-            color: $color1;
 		}
 
 		&__nav-right {
@@ -94,12 +104,14 @@ body{
 		}
 
 		&__icon-box {
+            position: relative;
+            z-index: 4;
             padding: 10px 0px 0px 0px;
             text-align: center;
             align-items: center;
             width: 50px;
             height: 50px;
-            margin: 0px 11.5px;
+            margin: 0px 0px 0px 10px;
             border-radius: 50%;
             background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -144,8 +156,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
     & a{
+        position: relative;
+        z-index: 5;
+        padding: 15px;
         width: calc(88px + (215 - 88) * ((100vw - 320px) / (1920 - 320)));
     }
     & a img{
@@ -177,7 +191,6 @@ body{
     }
 
     &__about {
-        /* width: calc(200px + (494 - 200) * ((100vw - 320px) / (1920 - 320))); */
         flex: 1 0 220px;
         & ul {
             margin-bottom: 15px;
@@ -189,13 +202,11 @@ body{
     }
 
     &__catalog {
-        /* width: calc(200px + (452 - 200) * ((100vw - 320px) / (1920 - 320))); */
         flex: 1 0 210px;
     }
 
     &__clients {
-        /* width: calc(430px + (463 - 430) * ((100vw - 320px) / (1920 - 320))); */
-        width: 463px;
+       width: 463px;
 
     }
 
@@ -215,9 +226,7 @@ body{
         margin: 0px 0px calc(16px + (37 - 16) * ((100vw - 320px) / (1920 - 320))) 0px;
     }
     &__link{
-        font-size: 20px;
         line-height: 210%;
-        color: $color2;
     }
     &__mail{
         display: block;
@@ -280,19 +289,20 @@ body{
         display: flex;
         margin: 0px -10px;
         position: relative;
-    }
-
-    &__product {
-        width: calc(100% / 5 - 20px);
-        margin: 0px 10px;
-        & > a{
+        overflow-x: visible;
+        flex-wrap: nowrap;
+        & a{
             display: block;
         }
     }
 
+    &__product {
+        min-width: calc(100% / 5 - 20px);
+        margin: 0px 10px;
+    }
+
     &__img {
-        max-width: calc(132px + (327 - 132) * ((100vw - 320px) / (1920 - 320)));
-        max-height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
+        height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
         position: relative;
         margin-bottom: 25px;
         border-radius: 7px;
@@ -309,7 +319,6 @@ body{
     }
 
     &__name {
-        font-size: calc(10px + (24 - 10) * ((100vw - 320px) / (1920 - 320)));
         line-height: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
     }
 
@@ -371,8 +380,6 @@ body{
     }
 
     &__text {
-        font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
-        color: $color2;
         line-height: 210%;
         max-width: 650px;
         margin-bottom: calc(16px + (46 - 16) * ((100vw - 320px) / (1920 - 320)));
@@ -386,7 +393,6 @@ body{
         background-color: transparent;
         border: 2.61538px solid $color1;
         border-radius: 55px;
-        font-size: calc(10px + (29 - 10) * ((100vw - 320px) / (1920 - 320)));
         position: relative;
         z-index: 5;
     }
@@ -432,9 +438,7 @@ body{
     &__item {
 
         & a{
-            font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1920 - 320)));
             line-height: calc(14px + (60 - 14) * ((100vw - 320px) / (1920 - 320)));
-            color: $color1;
         }
     }
 }
@@ -442,55 +446,51 @@ body{
     flex: 1 1 auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: calc(229px + (566 - 229) * ((100vw - 320px) / (1920 - 320)));
     grid-column-gap: calc(2px + (21 - 2) * ((100vw - 320px) / (1920 - 320)));
     grid-row-gap: 40px;
     margin-bottom: calc(70px + (95 - 70) * ((100vw - 320px) / (1920 - 320)));
     &__item {
-        width: 100%;
-        height: 100%;
-        position: relative;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        position: relative;
+        overflow-y: hidden;
+        & span{
+            position: absolute;
+            top: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
+            right: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
+            z-index: 2;
+        }
     }
 
     &__img {
         flex: 1 1 auto;
         width: 100%;
+        height: calc(230px + (552 - 230) * ((100vw - 320px) / (1920 - 320)));
         position: relative;
         border-radius: 7px;
         margin-bottom: 20px;
         & img {
+            width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        & span{
-            position: absolute;
-            top: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
-            right: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
-        }
+        
     }
     &__icon{
         font-size: calc(17px + (32 - 17) * ((100vw - 320px) / (1920 - 320)));
     }
 
     &__dscr {
-        flex: 0 1 auto;
+        /* flex: 0 0 auto; */
         display: flex;
         justify-content: space-between;
     }
 
-    &__name {
-        font-size: calc(10px + (18 - 10) * ((100vw - 320px) / (1920 - 320)));
-        line-height: calc(14px + (26 - 14) * ((100vw - 320px) / (1920 - 320)));
-        color: $color1;
-    }
 
     &__price {
-        font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
         line-height: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
         font-weight: 700;
-        color: $color1;
     }
     &__button-box{
         display: flex;
@@ -502,8 +502,6 @@ body{
         background: $color1;
         border-radius: 150px;
         color: $white;
-        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-        line-height: calc(20px + (26 - 20) * ((100vw - 320px) / (1920 - 320)));
     }
 }
 
@@ -533,7 +531,6 @@ body{
     font-family: 'Artegra Sans Extended Alt';
     font-style: normal;
     font-weight: normal;
-    color: $color1;
     font-size: 18px;
     line-height: 23px;
     width: 100%;
@@ -558,7 +555,6 @@ body{
             display: inline-block;
             padding: 25px 0px;
             max-width: 326px;
-            font-size: 16px;
             line-height: 23px;
             background-color: $white;
             & a, & button{
@@ -574,27 +570,17 @@ body{
             margin-bottom: 35px;
 		}
 
-		&__input-title {
-            /* font-size: 16px;
-            line-height: 23px; */
-		}
-
-		&__input-email {
-		}
-
         &__input-pass {
             margin-bottom: unset;
 		}
 
 		&__restore {
-            color: $color1;
             text-align: center;
             margin: 14px 0px;
             text-decoration: underline;
 		}
 
 		&__button {
-            font-size: 18px;
             text-align: center;
             color: $white;
             border: 1px solid #202020;
@@ -606,7 +592,6 @@ body{
 		}
 
 		&__reg {
-            color: $color1;
             text-align: center;
             text-decoration: underline;
 		}
@@ -618,71 +603,164 @@ body{
 /*  */
 
 
-.wrapper {
-}
 .page-product {
 
-		&__content {
-		}
+    &__content {
+        padding: 30px 0px calc(90px + (280 - 90) * ((100vw - 320px) / (1920 - 320))) 0px;
+    }
 
-		&__container {
-		}
+    &__container {
+        position: relative;
+        display: flex;
+        margin-bottom: 110px;
+    }
 
-		&__images {
+    &__back{
+        flex: 0 1 auto;
+        display: flex;
+        color: $color2;
+        margin-right: calc(0px + (160 - 0) * ((100vw - 768px) / (1920 - 768)));
+        & span{
+            margin-right: 6px;
+        }
+    }
 
-			&_small {
-			}
-		}
+    &__images_small {
+        flex: 0 0 70px;
+        & img{
+            width: 100%;
+            max-height: 90px;
+            margin-bottom: 30px;
+            object-fit: cover;
+        }
+    }
+    
 
-		&__image {
+    &__image_large {
+        flex: 0 1 823px;
+        margin: 0px 30px;
+        height: calc(385px + (1030 - 385) * ((100vw - 320px) / (1920 - 320)));
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
-			&_large {
-			}
-		}
+    &__sett {
+        flex: 0 1 363px;
+        padding: 0px 20px 0px 0px;
+    }
 
-		&__sett {
-		}
+    &__name {
+        font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: 10px;
+    }
 
-		&__name {
-		}
+    &__price {
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320)));
+    }
 
-		&__price {
-		}
+    &__color-change-box {
+    }
 
-		&__color-change-box {
-		}
+    &__color {
+        display: inline-block;
+        width: 46px;
+        height: 46px;
+        border: 1.5px solid transparent;
+        margin: 0px 10px 17px 0px;
+        padding: 2.5px;
+        border-radius: 50%;
+        text-align: center;
+        
+        .brown {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: $iconColor4;
+        }
+        .gray {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: $iconColor1;
+        }
+    }
+    .active{
+        border: 1.5px solid $black;
+    }
 
-		&__color {
-		}
+    &__color-change-descr {
+        margin-bottom: 50px;
+    }
 
-		&__color-change-descr {
-		}
+    &__size-box {
+        margin-bottom: 17px;
+    }
+    &__size-header{
+        display: flex;
+        justify-content: space-between;
+        background: $background3;
+        border-radius: 55px;
+        padding: 17px 16px 17px 21px;
+        .icon-footer-facebook{
+            font-size: 16px;
+        }
+    }
+    &__size-title{
+        display: inline-block;
+    }
+    &__size-body{
+        display: none;
+    }
 
-		&__size {
-		}
+    &__button {
+        padding: 13px 21px;
+        background: $color1;
+        border-radius: 55px;
+        color: $white;
+        margin-right: 10px;
+    }
+    &__button-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+        .icon-footer-facebook{
+            font-size: 25px;
+        }
+        & a{
+            display: inline-block;
+        }
+    }
+    .icon-footer-facebook_border{
+        display: inline-block;
+        width: 51px;
+        height: 51px;
+        padding: 11px;
+        border: 1.5px solid $color1;
+        border-radius: 50%;
+        text-align: center;
+    }
+    &__item-box{
 
-		&__button {
-		}
-
-		&__item {
-		}
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1.5px solid $black;
+        padding: 22px 0px 10px 0px;
+        .icon-footer-facebook{
+            font-size: 18px;
+        }
+    }
 }
-.icon {
-}
-.icon-footer-facebook {
-}
-.brown {
-}
-.grey {
-}
-.page-product {
 
-		&__color {
-
-			&_active {
-			}
-		}
-}
 
 
 
@@ -691,7 +769,7 @@ body{
 
 
 /* Карточка кликабельная */
-/* ссылки на картинки */
-/* цвета ссылок */
-
+/* Убрать ссылки с карточек */
+/*  Футер  прижать к низу */
+/* Как использовать transperent на кругах */
 
