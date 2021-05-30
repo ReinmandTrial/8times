@@ -2,10 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:
-    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?haocrv') format('truetype'),
-    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?haocrv') format('woff'),
-    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?haocrv##{$icomoon-font-family}') format('svg');
+  src:  url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.eot?itihnd');
+  src:  url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.eot?itihnd#iefix') format('embedded-opentype'),
+    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?itihnd') format('truetype'),
+    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?itihnd') format('woff'),
+    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?itihnd##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,74 +27,79 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-nav-Handbag {
+.icon-facebook {
   &:before {
-    content: $icon-nav-Handbag; 
+    content: $icon-facebook; 
   }
 }
-.icon-appstore {
+.icon-filtre {
   &:before {
-    content: $icon-appstore; 
+    content: $icon-filtre; 
   }
 }
-.icon-earth {
+.icon-heart {
   &:before {
-    content: $icon-earth; 
+    content: $icon-heart; 
   }
 }
-.icon-footer-facebook {
+.icon-instagram {
   &:before {
-    content: $icon-footer-facebook; 
+    content: $icon-instagram; 
   }
 }
-.icon-footer-inst {
+.icon-triangle-left {
   &:before {
-    content: $icon-footer-inst; 
+    content: $icon-triangle-left; 
   }
 }
-.icon-googleplay {
+.icon-triangle-right {
   &:before {
-    content: $icon-googleplay; 
+    content: $icon-triangle-right; 
   }
 }
-.icon-Inst {
+.icon-burger {
   &:before {
-    content: $icon-Inst; 
+    content: $icon-burger; 
   }
 }
-.icon-like {
+.icon-close {
   &:before {
-    content: $icon-like; 
+    content: $icon-close; 
   }
 }
-.icon-main-Vector {
+.icon-triangle-down {
   &:before {
-    content: $icon-main-Vector; 
+    content: $icon-triangle-down; 
   }
 }
-.icon-nav-Heart {
+.icon-lang {
   &:before {
-    content: $icon-nav-Heart; 
+    content: $icon-lang; 
   }
 }
-.icon-nav-search {
+.icon-search {
   &:before {
-    content: $icon-nav-search; 
+    content: $icon-search; 
   }
 }
-.icon-right {
+.icon-telegram {
   &:before {
-    content: $icon-right; 
+    content: $icon-telegram; 
   }
 }
-.icon-SignIn {
+.icon-whatsapp {
   &:before {
-    content: $icon-SignIn; 
+    content: $icon-whatsapp; 
   }
 }
-.icon-Whatsapp {
+.icon-exit {
   &:before {
-    content: $icon-Whatsapp; 
+    content: $icon-exit; 
+  }
+}
+.icon-bag {
+  &:before {
+    content: $icon-bag; 
   }
 }
 
