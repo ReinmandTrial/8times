@@ -68,7 +68,11 @@ footer {
 
 
 
-
+.page-main{
+    &.login-open{
+        display: none;
+    }
+}
 .wrapper {
     max-width: 1716px;
     margin: 0 auto;
@@ -96,7 +100,10 @@ footer {
 
 
 .header {
-
+        &.open{
+            background: $background3;
+            opacity: 0.98;
+        }
 		&__content {
             height: calc(56px + (210 - 56) * ((100vw - 320px) / (1920 - 320)));
             display: flex;
@@ -144,25 +151,83 @@ footer {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             font-size: 20px;
 		}
-}
-.icon-burger{
-    padding: 10px 10px 10px 0px;
-    color: $color2;
-    position: relative;
-    top: 2px;
-    font-size: 20px;
+        
+        .icon-burger,
+        .icon-close{
+            width: 33px;
+            padding: 10px 10px 10px 0px;
+            cursor: pointer;
+            color: $color2;
+            position: relative;
+            top: 2px;
+            font-size: 20px;
 
+        }
 }
 .burger{
     display: none;
     position: fixed;
     width: 100%;
-    height: 100vh;
-    top: 0;
+    font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 40px;
+    top: calc(56px + (210 - 56) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(100vh - (56px + (210 - 56) * ((100vw - 320px) / (1920 - 320))));
     left: 0;
     z-index: 999;
     background: $background3;
     opacity: 0.98;
+    .icon{
+        margin-right: 15px;
+    }
+    &-table{
+        width: 100%;
+        width: 1500px;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+    }
+    &-table__list{
+        width: 25%;
+    }
+    &-table__item{
+        margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+    }
+    &-search{
+        position: relative;
+        margin-bottom: 95px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color1;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 1px;
+            background: $background1;
+        }
+        .icon{
+            margin: 0;
+            font-size: calc(22px + (36 - 22) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+    &-search__input{
+        flex: 1 0 auto;
+        background: transparent;
+        &::placeholder{
+            font-size: 16px;
+            color: #858586;
+        }
+    }
+    &-exit{
+        font-weight: 600;
+    }
 }
 .logo {
     position: absolute;
@@ -673,8 +738,11 @@ footer {
             justify-content: center;
             align-items: flex-end;
             
-            padding: 100px 0px 200px 0px;
+            padding: 80px 0px 200px 0px;
 		}
+        .close{
+            display: none;
+        }
 }
 .login {
 		&__form {

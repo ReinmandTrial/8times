@@ -51,14 +51,37 @@ $('.page-product__size-link').on('click', function () {
 })
 //выподалка размеров конец
 //burger menu 
+$('.btn-burger').on('click',function(){
+    $(this).toggleClass('icon-burger');
+    $(this).toggleClass('icon-close');
+    $('.header').toggleClass('open');
+    if($(this).hasClass('icon-close')){
+        $('.burger').show();
 
+    }else{
+        $('.burger').hide();
+    }
+})
 //burger menu end\
 
 //регистрация попап
 $('.btn-reg').on('click',function(){
-    $('.page-reg').fadeIn();
+    $('.page-main').removeClass('login-open');
+    $('.page-login').hide();
+    $('.page-reg').show();
+    
 })
 $('.reg__form>.close').on('click',function(){
-    $(this).closest('.page-reg').fadeOut();
+    $(this).closest('.page-reg').hide();
 })
 //регистрация попап конец
+//Войти попап 
+$('.btn-login').on('click',function(){ 
+    $('.page-main').addClass('login-open');
+    $('.page-reg').hide();
+    $('.page-login').show();
+    $('.burger').hide();
+    $('.btn-burger').removeClass('icon-close').addClass('icon-burger');
+    $('.header').removeClass('open');
+})
+// Войти попап конец 
