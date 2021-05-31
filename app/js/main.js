@@ -1,18 +1,18 @@
-// const { default: Swiper } = require("swiper");
 
-// $(function () {
-
-// });
-new Swiper('.swiper-slide', {
+new Swiper('.swiper-container', {
+    // навигация, кнопки
     navigation: {
-        nextE: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.products-row__button_next',
+        prevEl: '.products-row__button_prev',
     },
-    slidesPerView: auto,
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true
-    },
+    // модификации 
+    grabCursor: true, //  курсор-рука
+    autoHeight: true, // автовысота
+    slidesPerView: 'auto', //кол-во показываемых слайдов
+    watchOverflow: true, //если слайдов мало, - слайдер отключается
+    spaceBetween: 20, // отступы между слайдами
+    loop: true, // бесконечный слайдер
+    slideToClickedSlide: false,
 });
 //выбор цвета
 $('.page-product__color').on('click', function () {

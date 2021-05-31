@@ -339,8 +339,8 @@ footer {
     
 // } 
 
-.swiper-slide{
-    width: unset;
+.swiper-slide {
+    width: auto;
 }
 .products-row {
     margin: 0px 0px 63px 0px;
@@ -349,12 +349,22 @@ footer {
         display: flex;
         justify-content: space-between;
         margin-bottom: 25px;
+        & span{
+            font-size: calc(13px + (20 - 13) * ((100vw - 320px) / (1920 - 320)));
+        }
     }
 
     &__more {
         & span{
             margin-left: 15px;
         }
+    }
+    &__container{
+
+    }
+    &__wrapper{
+           
+        padding: 5px 0px;
     }
     &__item {
         position: relative;
@@ -368,7 +378,7 @@ footer {
     &__img {
         width: calc(132px + (327 - 132) * ((100vw - 320px) / (1920 - 320)));
         height: calc(190px + (470 - 190) * ((100vw - 320px) / (1920 - 320)));
-        margin-bottom: 25px;
+        margin-bottom: calc(10px + (25 - 10) * ((100vw - 320px) / (1920 - 320)));
         border-radius: 7px;
         & img {
             height: 100%;
@@ -385,13 +395,35 @@ footer {
     }
     &__button{
         position: absolute;
-
-
+        bottom: 47%;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: rgba(170, 170, 168, 0.6);
         width: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
         height: calc(40px + (53 - 40) * ((100vw - 320px) / (1920 - 320)));
         border-radius: 50%;
-    }
+        &_next{
+            right: -22px;
+            & span{
+                position: relative;
+                left: 1px;
+            }
+        }
+        &_prev{
+            left: -22px;
+            & span{
+                position: relative;
+                right: 1px;
+            }
+
+        }
+        & span{
+            font-size: 13px;
+            color: $white;
+        }
+    }   
     
 }
 
