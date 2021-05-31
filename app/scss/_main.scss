@@ -73,7 +73,9 @@ footer {
     max-width: 1716px;
     margin: 0 auto;
 }
-
+.d-none{
+    display: none;
+}
 
 /* page.html START*/
 
@@ -736,6 +738,27 @@ footer {
             justify-content: center;
             align-items: center;
 		}
+        &.d-none{
+            width: 100%;
+            height: 100vh;
+            background: $background3;
+            opacity: 0.98;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            .wrapper{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .reg__form{
+                background: #fff;
+                border-radius: 7px;
+                opacity: 1;
+            }
+        }
 }
 .reg {
 		&__form {
