@@ -15,11 +15,9 @@
 		<div class="wrapper">
 			<div class="header__content">
 				<div class="header__nav-left">
-					<a class="icon icon-burger btn-burger">
-						<span></span>
-					</a>
+					<a class="icon icon-burger btn-burger"></a>
 					<nav class="header__links">
-						<li><a href="#" class="header__link h6 btn-reg">Новинки</a></li>
+						<li><a href="#" class="header__link h6">Новинки</a></li>
 						<li><a href="#" class="header__link h6">Каталог</a></li>
 						<li><a href="#" class="header__link h6">Тренды</a></li>
 					</nav>
@@ -45,9 +43,39 @@
 	</header>
 	<!-- HEADER end -->
 
+
+
 	<!-- BURGER start -->
 	<div class="burger">
-		<div class="header-burger"></div>
+		<div class="burger-table">
+			<div class="burger-table__list">
+				<a class="burger-table__item" href="#">Новинки</a>
+				<a class="burger-table__item" href="#">Каталог<av>
+						<a class="burger-table__item" href="#">Тренды</a>
+						<a class="burger-table__item" href="#">Sale</a>
+			</div>
+			<div class="burger-table__list">
+				<a class="burger-table__item" href="#">Доставка</a>
+				<a class="burger-table__item" href="#">Избранное</a>
+			</div>
+			<div class="burger-table__list">
+				<a class="burger-table__item" href="#">О компании</a>
+			</div>
+			<div class="burger-table__list">
+				<a class="burger-table__item burger-search" href="#">
+					<input class="burger-search__input" type="text" placeholder="Найти на сайте">
+					<span class="icon icon-search"></span>
+				</a>
+				<a class="burger-table__item burger-exit btn-login" href="#">
+					<span class="icon icon-exit"></span>
+					Войти
+				</a>
+				<a class="burger-table__item burger-serch" href="#">
+					<span class="icon icon-lang"></span>
+					English version
+				</a>
+			</div>
+		</div>
 	</div>
 	<!-- BURGER end -->
 	<!-- registration  -->
@@ -71,20 +99,73 @@
 						<div class="reg__input-box">
 							<p class="reg__input-title">Восстановить пароль</p>
 							<input type="password" class="input reg__input-pass last">
+							<div class="reg__link-box">
+								<a href="#" class="reg__link">Уже зарегистрированы?</a>
+								<a href="#" class="reg__link underline btn-login">Войти в личный кабинет</a>
+							</div>
+							<button class="reg__button h9">Зарегестрироваться</button>
 						</div>
-						<button class="reg__button h9">Зарегестрироваться</button>
+						<div class="reg__link-box">
+							<a href="#" class="reg__link">Уже зарегистрированы?</a>
+							<a href="#" class="reg__link underline">Войти в личный кабинет</a>
+						</div>
 					</div>
-					<div class="reg__link-box">
-						<a href="#" class="reg__link">Уже зарегистрированы?</a>
-						<a href="#" class="reg__link underline">Войти в личный кабинет</a>
-					</div>
+				</div>
+			</div>
+	</section>
+	<!-- registration end  -->
+	<!-- login start  -->
+	<section class="page-login d-none">
+		<div class="wrapper">
+			<div class="page-login__content">
+				<a href="#" class="close">
+					<span class="icon icon-close"></span>
+				</a>
+				<div class="login__form">
+					<p class="login__title">Вход</p>
+					<p class="login__input-title h8">E-mail</p>
+					<input type="text" class="input">
+					<p class="login__input-title h8">Пароль</p>
+					<input type="password" class="input login__input-pass last">
+					<a href="#" class="login__restore h8">Восстановить пароль</a>
+					<button class="login__button h9">Войти</button>
+					<a href="#" class="login__reg h8 btn-reg">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- registration end  -->
+	<!-- login end  -->
 	<!-- LANDING start -->
 	<section class="page-main">
+
+		<div class="banner">
+			<div class="wrapper">
+				<h1 class="banner__title">
+					<a href="#" class="banner__link">ВЕСЕННЯЯ
+						КОЛЛЕКЦИЯ
+						2021</a>
+				</h1>
+				<button class="banner__btn"><img src="images/catalog-btn.svg" alt=""></button>
+			</div>
+			<div class="slider">
+				<div class="slider__content">
+					<div class="slider__background">
+					</div>
+					<div class="swiper-banner">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="images/girl.png" alt="girl"></div>
+							<div class="swiper-slide"><img src="images/girl.png" alt="girl"></div>
+							<div class="swiper-slide"><img src="images/girl.png" alt="girl"></div>
+							<div class="swiper-slide"><img src="images/girl.png" alt="girl"></div>
+							<div class="swiper-slide"><img src="images/girl.png" alt="girl"></div>
+						</div>
+						<div class="wrapper">
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="wrapper">
 			<div class="page-main__content">
 

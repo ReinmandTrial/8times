@@ -7,6 +7,23 @@
     .page-product__sett{
         padding: 0;
     }
+    .banner {
+        .swiper-pagination {
+            bottom: 150px;
+        }
+    }
+}
+@media(max-width:1599.98px){
+    .burger{
+        &-table{
+            width: 100%;
+        }
+    }
+    .banner {
+        .swiper-pagination {
+            bottom: 220px;
+        }
+    }
 }
 @media (max-width: 1399.98px) {
     .burger-icon{
@@ -20,6 +37,18 @@
     }
     .footer__clients {
         width: 410px;
+    }
+    .banner {
+        &__title {
+            max-width: 768px;
+            margin-bottom: 80px;
+        }
+        .swiper-pagination {
+            bottom: 200px;
+        }
+        .swiper-slide {
+            padding-right: 60px;
+        }
     }
 }
 @media (max-width: 1199.98px) {
@@ -46,6 +75,18 @@
     }
     .page-product__button{
         margin-bottom: 10px;
+    }
+    .banner {
+        &__title {
+            max-width: 768px;
+            margin-bottom: 80px;
+        }
+        .swiper-pagination {
+            bottom: 200px;
+        }
+        .swiper-slide {
+            padding-right: 10px;
+        }
     }
 }
 @media (max-width: 991.98px){
