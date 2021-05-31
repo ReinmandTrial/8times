@@ -1,4 +1,3 @@
-$($('.page-main__container').find('.products-row__container')).each(function(){
     new Swiper('.swiper-container', {
     // навигация, кнопки
     navigation: {
@@ -14,7 +13,17 @@ $($('.page-main__container').find('.products-row__container')).each(function(){
     loop: true, // бесконечный слайдер
     slideToClickedSlide: false,
 });
-})
+    new Swiper('.swiper-banner', {
+    watchOverflow: true, //если слайдов мало, - слайдер отключается
+    loop: true, // бесконечный слайдер
+    speed: 400,
+    // spaceBetween: 350,
+    autoplay: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+});
 // new Swiper('.swiper-container', {
 //     // навигация, кнопки
 //     navigation: {

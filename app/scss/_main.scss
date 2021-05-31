@@ -1081,3 +1081,92 @@ footer {
 
 
 /* Страницы регистрации и входа, положение кнопки назад */
+
+
+.slider {
+    position: absolute;
+    width: 100%;
+    top: -210px;
+    right: 100px;
+    left: 0;
+    z-index: -1;
+    height: calc(100% + 200px);
+    // height: 100%;
+    // height: calc(488px + (1141 - 488) * ((100vw - 320px) / (1920 - 320)));
+    overflow: hidden;
+    &__content {
+        position: relative;
+        height: 100%;
+    }
+    &__background {
+        position: absolute;
+        width: calc(508px + (1500 - 508) * ((100vw - 320px) / (1920 - 320)));
+        // height: calc(508px + (1333 - 508) * ((100vw - 320px) / (1920 - 320)));
+        height: 1333px;
+        border-radius: 50%;
+        background: $background3;
+        top: -161px;
+        right: -439px;
+        right: calc(-200px + (-439 + 200) * ((100vw - 320px) / (1920 - 320)));
+        z-index: -1;
+    }
+    .swiper-banner {
+        height: 100%;
+    }
+}
+
+
+.banner {
+    position: relative;
+    &__title {
+        font-size: calc(61px + (122 - 61) * ((100vw - 768px) / (1920 - 768)));
+        font-weight: 800;
+        max-width: 1034px;
+        margin-bottom: 72px;
+    }
+    &__btn {
+        background: transparent;
+        margin-bottom: 393px;
+        img {
+            transition: 1s;
+            &:hover {
+                rotate: 360deg;
+            }
+        }
+    }
+    .swiper-slide {
+        display: flex;
+        justify-content: end;
+        height: 100%;
+        padding-right: 120px;
+        img {
+            height: 100%;
+            display: inline-block;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+    .swiper-banner {
+        position: relative;
+    }
+    .swiper-pagination {
+        position: absolute;
+        bottom: 250px;
+        display: flex;
+        // left: 100px;
+    }
+    .swiper-pagination-bullet {
+        width: 21px;
+        height: 21px;
+        border: 2px solid $color2;
+        border-radius: 50%;
+        &:not(:first-child) {
+            margin-left: 59px;
+        }
+        &-active {
+            background: $color1;
+            border: 2px solid $color1;
+        }
+    }
+}
+
