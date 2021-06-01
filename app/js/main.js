@@ -130,3 +130,11 @@ $(document).on('click', function(e) {
     e.stopPropagation();
   });
   //end
+
+  // add to favorites
+$('.btn-heart').on('click',function() {
+    $(this).find('.icon-heart').toggleClass('active');
+})
+  // add to favorit
+
+  
