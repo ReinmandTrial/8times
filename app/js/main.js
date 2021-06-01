@@ -78,6 +78,7 @@ $('.btn-burger').on('click', function () {
     $(this).toggleClass('icon-burger');
     $(this).toggleClass('icon-close');
     $('.header').toggleClass('open');
+    $('body').toggleClass('burger-open');
     if ($(this).hasClass('icon-close')) {
         $('.burger').show();
 
@@ -106,5 +107,26 @@ $('.btn-login').on('click', function () {
     $('.burger').hide();
     $('.btn-burger').removeClass('icon-close').addClass('icon-burger');
     $('.header').removeClass('open');
+    $('body').removeClass('burger-open');
 })
 // Войти попап конец
+$(window).on("load resize",(function(){
+      if($(window).width()<"576"){
+        $('.header__nav-right').append($('.burger-search'));
+      }else{
+          $('.burger-table__list-mobile').append($('.burger-search'));
+      }
+  }));
+  //mobile burger search
+$('.btn-search-mobile').on('click',function(){
+    $('.header__nav-right').addClass('open');
+    $('.logo').toggleClass('d-none')
+})
+$(document).on('click', function(e) {
+    if (!$(e.target).closest(".burger-search").length && !$(e.target).closest(".btn-search-mobile").length) {
+      $('.logo').removeClass('d-none');
+      $('.header__nav-right').removeClass('open');
+    }
+    e.stopPropagation();
+  });
+  //end
