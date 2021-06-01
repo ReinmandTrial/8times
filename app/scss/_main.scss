@@ -59,11 +59,14 @@ footer {
     color: $color2;
 }
 .h8{
-    font-size: 16px;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
 }
 .h9{
     font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
 
+}
+.h10{
+    font-size: 12px;
 }
 
 
@@ -1022,7 +1025,12 @@ footer {
 .wrapper {
 }
 .page-basket {
-    position: relative;
+    .h7{
+        color: $color1;
+    }
+    .input{
+        margin-bottom: unset;
+    }
     .wrapper {
         max-width: 1000px;
     }
@@ -1032,7 +1040,7 @@ footer {
 
 		&__header {
             position: absolute;
-            top: 50px;
+            top: calc(76px + (260 - 76) * ((100vw - 320px) / (1920 - 320)));
             left: 40px;
 		}
 
@@ -1040,45 +1048,44 @@ footer {
 		}
 
 		&__list {
+            border-bottom: 1px solid $color1;
 		}
 
 
         &__pormo-box {
+            padding: 30px 0px 45px 0px;
 		}
 
 		&__promo-title {
 		}
 
 		&__promo-body {
+            display: flex;
+            display: none;
+            margin-top: 10px;
 		}
 
 		&__promo-input {
+            max-width: 330px;
+            margin-right: 10px;
 		}
 
 		&__promo-button {
+            padding: 13px 20px;
+            background: #202020;
+            border-radius: 55px;
+            color: #fff;
 		}
-
-		&__form {
-		}
-
-		&__form-title {
-		}
-
-		&__input-box {
-		}
-
-		&__input-title {
-            font-size: 18px;
-		}
-
-		&__input {
-		}
+        &__container{
+            display: flex;
+        }
+        
+        
 }
 .basket-item {
         height: 100px;
         display: flex;
         margin-bottom: 40px;
-        justify-content: space-between;
 		&__img {
             flex: 0 0 80px;
             height: 100%;
@@ -1089,9 +1096,19 @@ footer {
                 object-fit: cover;
             }
 		}
+        &__container{
+            flex: 1 0 auto;
+            display: flex;
+            justify-content: space-between;
+            height: 54px;
+            align-self: start;
+            align-items: center;
+        }
 
 		&__text {
-            flex: 0 1 170px;
+            flex: 0 0 170px;
+            width: 170px;
+            align-self: start;
 		}
 
 		&__num {
@@ -1105,14 +1122,14 @@ footer {
             flex: 0 0 auto;
             width: 60px;
             height: 20px;
-            margin: 11px 10px 0px 10px;
             background: $black;
 		}
 
 		&__edit-row {
+            margin-left: 30px;
             display: flex;
             justify-content: space-between;
-            width: 220px;
+            width: 230px;
 		}
         &__edit-border{
             width: 100px;
@@ -1123,10 +1140,18 @@ footer {
 		}
 
 		&__size-header {
+            position: relative;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             height: 42px;
             padding: 12px 11px;
+            & span{
+                position: relative;
+                top: 1px;
+                font-size: 9px;
+                
+            }
 		}
 
 		&__size-body {
@@ -1145,9 +1170,11 @@ footer {
 		&__amount {
             display: flex;
             justify-content: space-between;
-            padding: 12px 11px;
+            align-items: center;
             height: 42px;
             & a{
+                display: flex;
+                align-items: center;
                 height: 100%;
                 &:hover{
                     background: $background3;
@@ -1156,7 +1183,8 @@ footer {
 		}
 
 		&__price {
-            flex: 1 1 auto;
+            flex: 0 1 auto;
+            width: 160px;
             text-align: right;
 		}
 
@@ -1164,27 +1192,174 @@ footer {
             flex: 0 0 auto;
 		}
 }
-.icon {
-}
-.icon-triangle-down {
-}
-.icon-bag {
-}
-.right-bar {
 
-		&_link {
+.form-order{
+        flex: 1 1 600px;
+        margin: 0px 50px 0px 0px;
+        display: flex;
+        flex-direction: column;
+
+		&__form-title {
+            margin-bottom: 30px;
+            font-weight: 600;
 		}
 
+		&__input-box {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+            &-adress{
+                width: 66%;
+                display: flex;
+                align-self: flex-end;
+                display: flex;
+                justify-content: space-between;
+                .form-order__input-title{
+                    margin-bottom: 10px;
+                }
+                .form-order__input-box{
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: start;
+                    width: calc((100% / 2) - 10px);
+                    .form-order__input{
+                        width: 100%;
+                    }
+                }
+            }
+		}
+
+		&__input-title {
+            font-size: 18px;
+            width: 34%;
+		}
+
+		&__input {
+            width: 66%;
+		}
+
+        &__radio {
+            display: flex;
+            margin-bottom: 30px;
+        }
+    
+        &__radio-title {
+            width: 34%;
+        }
+        &__radio-container{
+            width: 66%;
+        }
+        &__radio-box {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        &__wrapper{
+
+        }
+        &__radio-box-header {
+            display: flex;
+            margin-bottom: 8px;
+        }
+    
+        &__radio-input {
+            margin-right: 15px;
+        }
+    
+        &__radio-box-body {
+        }
+    
+        &__input-box-adress {
+        }
+    
+
+        &__textarea-box {
+            display: flex;
+            margin-bottom: 30px;
+        }
+    
+        &__textarea-title {
+            width: 34%;
+        }
+    
+        &__textarea-input{
+            height: 80px;
+            width: 66%;
+            border: 1px solid $color1;
+            padding: 12px 11px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+.right-bar {
+    position: sticky;
+    top: 0;
+    flex: 0 0 240px;
+    margin: 0px 20px 0px 0px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    & a{
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+        &__link-box{
+            margin-bottom: 50px;
+        }
+		&__link {
+            line-height: 1.2;
+            display: block;
+            margin-bottom: 17px;
+            color: $color2;
+            &:last-child{
+                margin-bottom: unset;
+            }
+            &:first-child{
+                color: $color1;
+            }
+            
+		}
+        &__total-box{
+            margin-bottom: 25px;
+        }
 		&__total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 13px;
+            
+            &:last-child{
+                margin-bottom: unset;
+            }
 		}
 
 		&__total-price {
+            font-weight: 600;
 		}
 
 		&__button {
+            width: 100%;
+            padding: 13px 20px;
+            background: #202020;
+            border-radius: 55px;
+            color: #fff;
+            margin-bottom: 30px;
 		}
 
 		&__text {
+            line-height: 1.2;
+            & a{
+                display: inline-block;
+            }
 		}
 }
 
