@@ -287,7 +287,6 @@ $(window).on('load resize', function () {
         $('.page-product__size-header').on('click', function () {
             $(this).next().slideToggle('slow');
             $(this).toggleClass('open');
-            $('body, html').css('overflow','hidden');
         })
 
         $('.swiper-slide').on('click', function () {
@@ -295,7 +294,6 @@ $(window).on('load resize', function () {
             $(this).closest('.page-product__size-box').find('.page-product__size-title').text('Размер ' + size);
             $(this).closest('.select').slideToggle('slow');
             $(this).closest('.page-product__size-box').find('.page-product__size-header').removeClass('open');
-            $('body, html').css('overflow','auto');
         })
         //выподалка размеров конец
 
@@ -327,12 +325,14 @@ $(window).on('load resize', function () {
         $('.page-product__size-header').on('click',function(){
             $(this).next().addClass('open');
             $(this).closest('.page-product__size-box').find('.select__bg').fadeIn();
+            $('body,html').css('overflow','hidden');
         })
         $('.select__header .icon, .select__bg').on('click',function(){
             $('.select').removeClass('open');
             $(this).closest('.page-product__size-box').find('.select__bg').fadeOut();
             var size = $('.select .swiper-slide-active').find('.select__size').text();
             $(this).closest('.page-product__size-box').find('.page-product__size-title').text('Размер ' + size);
+            $('body,html').css('overflow','auto');
         })
             //выподалка размеров мобилка
     }
