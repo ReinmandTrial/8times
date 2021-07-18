@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9unx84');
-  src:  url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9unx84#iefix') format('embedded-opentype'),
-    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9unx84') format('truetype'),
-    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9unx84') format('woff'),
-    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9unx84##{$icomoon-font-family}') format('svg');
+  src:  url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.eot?k8nslf');
+  src:  url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.eot?k8nslf#iefix') format('embedded-opentype'),
+    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?k8nslf') format('truetype'),
+    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.woff?k8nslf') format('woff'),
+    url('../fonts/icon/#{$icomoon-font-path}/#{$icomoon-font-family}.svg?k8nslf##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -121,6 +121,11 @@
 .icon-three-band {
   &:before {
     content: $icon-three-band; 
+  }
+}
+.icon-user {
+  &:before {
+    content: $icon-user; 
   }
 }
 

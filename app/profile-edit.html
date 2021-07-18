@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Page</title>
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+   <!-- HEADER start -->
+   <header class="header">
+      <div class="wrapper">
+         <div class="header__content">
+            <div class="header__nav-left">
+               <a class="icon icon-burger btn-burger"></a>
+               <ul class="header__links">
+                  <li><a href="#" class="header__link h6">Новинки</a></li>
+                  <li><a href="#" class="header__link h6">Каталог</a></li>
+                  <li><a href="#" class="header__link h6">Тренды</a></li>
+               </ul>
+            </div>
+            <div class="logo">
+               <a href="#">
+                  <img src="images/Logo.svg" alt="">
+               </a>
+            </div>
+            <div class="header__nav-right">
+               <a href="#" class="header__icon-box left btn-search-mobile">
+                  <span class="icon icon-search"></span>
+                  <span class="header__icon-bg"></span>
+               </a>
+               <a href="#" class="header__icon-box">
+                  <span class="icon icon-heart"></span>
+               </a>
+               <a href="#" class="header__icon-box">
+                  <span class="icon icon-bag"><span class="counter"></span></span>
+               </a>
+               <a href="#" class="header__icon-box">
+                  <span class="icon icon-bag">
+                  </span>
+               </a>
+               <a href="#" class="header__icon-box exit">
+                  <span class="icon icon-exit"></span>
+                  <span class="header__icon-bg"></span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- HEADER end -->
+
+
+
+   <!-- BURGER start -->
+   <div class="burger">
+      <div class="burger-table">
+         <div class="burger-table__list">
+            <a class="burger-table__item" href="#">Новинки</a>
+            <a class="burger-table__item" href="#">Каталог</a>
+            <a class="burger-table__item" href="#">Тренды</a>
+            <a class="burger-table__item" href="#">Sale</a>
+         </div>
+         <div class="burger-table__list">
+            <a class="burger-table__item" href="#">Доставка</a>
+            <a class="burger-table__item" href="#">Избранное</a>
+         </div>
+         <div class="burger-table__list">
+            <a class="burger-table__item" href="#">О компании</a>
+            <div class="burger-table__item burger-table__item-select select-item">
+               <div class="burger-table__item-head select-item-header">
+                  <p>Мой кабинет</p>
+                  <span class="icon icon-triangle-down select-item-icon"></span>
+               </div>
+               <div class="burger-table__item-body select-item-body">
+                  <a href="#">Профиль</a>
+                  <a href="#">Мои заказы</a>
+                  <a href="#">Избранное</a>
+                  <a href="#">Выход</a>
+               </div>
+            </div>
+         </div>
+         <div class="burger-table__list burger-table__list-mobile">
+            <span class="burger-table__item burger-search">
+               <input class="burger-search__input" type="text" placeholder="Найти на сайте">
+               <span class="icon icon-search"></span>
+            </span>
+            <a class="burger-table__item burger-exit btn-login" href="#">
+               <span class="icon icon-exit"></span>
+               Войти
+            </a>
+            <a class="burger-table__item burger-lang" href="#">
+               <span class="icon icon-lang"></span>
+               English <span class="burger-table__item-lang">version</span>
+            </a>
+         </div>
+      </div>
+      <div class="burger__button">
+         <a class="btn-contur h10" href="#"><span class="icon icon-instagram"></span>Instagram</a>
+         <a class="btn-primary h10" href="#"><span class="icon icon-whatsapp"></span>WhatsApp</a>
+      </div>
+   </div>
+   <!-- BURGER end -->
+   <!-- registration  -->
+   <div class="page-reg d-none modify">
+      <div class="wrapper">
+         <div class="page-reg__content">
+            <div class="reg__form h8">
+               <a href="#" class="close">
+                  <span class="icon icon-close"></span>
+               </a>
+               <p class="reg__title">Регистрация</p>
+               <div class="reg__container">
+                  <div class="reg__input-box">
+                     <p class="reg__input-title">E-mail</p>
+                     <input type="text" class="input">
+                  </div>
+                  <div class="reg__input-box">
+                     <p class="reg__input-title">Пароль</p>
+                     <input type="password" class="input reg__input-pass">
+                  </div>
+                  <div class="reg__input-box">
+                     <p class="reg__input-title">Восстановить пароль</p>
+                     <input type="password" class="input reg__input-pass last">
+                     <button class="reg__button h9">Зарегестрироваться</button>
+                  </div>
+                  <div class="reg__link-box">
+                     <a href="#" class="reg__link">Уже зарегистрированы?</a>
+                     <a href="#" class="reg__link underline btn-login">Войти в личный кабинет</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- registration end  -->
+   <!-- login start  -->
+   <div class="page-login d-none">
+      <div class="wrapper">
+         <div class="page-login__content">
+            <a href="#" class="close">
+               <span class="icon icon-close"></span>
+            </a>
+            <div class="login__form">
+               <p class="login__title">Вход</p>
+               <p class="login__input-title h8">E-mail</p>
+               <input type="text" class="input">
+               <p class="login__input-title h8">Пароль</p>
+               <input type="password" class="input login__input-pass last">
+               <a href="#" class="login__restore h8">Восстановить пароль</a>
+               <button class="login__button h9">Войти</button>
+               <a href="#" class="login__reg h8 btn-reg">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- login end  -->
+
+   <section class="profile">
+      <div class="wrapper">
+         <div class="profile__content">
+            <aside class="profile-nav">
+               <p class="profile-nav__title h7">Мой кабинет</p>
+               <div class="profile-nav__body h8">
+                  <a href="#" class="profile-nav__item">Профиль</a>
+                  <a href="#" class="profile-nav__item">Мои заказы</a>
+                  <a href="#" class="profile-nav__item">Избранное</a>
+                  <a href="#" class="profile-nav__item">Выход</a>
+               </div>
+            </aside>
+            <div class="profile__container">
+               <p class="profile__title h5">личные данные</p>
+               <div class="profile__block">
+                  <button class="profile__edit-btn h8">Редактировать</button>
+                  <button class="profile__back-btn h8">Назад</button>
+
+                  <label class="profile__row">
+                     <p class="profile__subtitle h7">Имя</p>
+                     <div class="profile__item">
+                        <p class="profile__value h5">Валерий</p>
+                        <input type="text" class="profile__input input">
+                     </div>
+                  </label>
+                  <label class="profile__row">
+                     <p class="profile__subtitle h7">Фамилия</p>
+                     <div class="profile__item">
+                        <p class="profile__value h5">Николаев</p>
+                        <input type="text" class="profile__input input">
+                     </div>
+                  </label>
+                  <label class="profile__row profile__pass">
+                     <p class="profile__subtitle h7">Пароль</p>
+                     <div class="profile__item">
+                        <button class="change-pass-btn btn-popup__change btn-popup">
+                           изменить пароль
+                        </button>
+                     </div>
+                  </label>
+                  <label class="profile__row">
+                     <p class="profile__subtitle h7">Телефон</p>
+                     <div class="profile__item">
+                        <p class="profile__value h5">8-800-555-35-35</p>
+                        <input type="text" class="profile__input input">
+                     </div>
+                  </label>
+               </div>
+               <label class="profile__accept">
+                  <input type="checkbox" class="radio-input">
+                  <span class="radio-style"></span>
+                  <div class="profile__accept-descr h7">
+                     Я соглашаюсь на обработку моих персональных данных и ознакомлен(а) с <a href="#"
+                        class="profile__link">условиями конфиденциальности</a>
+                  </div>
+               </label>
+               <button class="profile__button">сохранить изменения</button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- popup change pass start -->
+
+   <div class="popup popup-change">
+      <div class="popup__body">
+         <div class="change-pass">
+            <span class="icon icon-close popup__close"></span>
+            <div class="change-pass__input-block">
+               <div class="change-pass__input-box">
+                  <p class="change-pass__input-title h8">Старый пароль</p>
+                  <input type="password" class="change-pass__input input">
+               </div>
+               <div class="change-pass__input-box">
+                  <p class="change-pass__input-title h8">Новый пароль</p>
+                  <input type="password" class="change-pass__input input">
+               </div>
+               <div class="change-pass__input-box">
+                  <p class="change-pass__input-title h8">Повторите пароль</p>
+                  <input type="password" class="change-pass__input input">
+               </div>
+            </div>
+            <button class="change-pass__btn">Сохранить</button>
+         </div>
+      </div>
+   </div>
+
+   <!-- popup change pass end -->
+
+   <!-- FOOTER start -->
+   <footer class="footer">
+      <div class="wrapper">
+         <div class="footer__content">
+            <div class="footer__about footer__block">
+               <p class="footer__title">8times</p>
+               <ul>
+                  <li><a href="#" class="footer__link h7">О нас</a></li>
+                  <li><a href="#" class="footer__link h7">Написать нам</a></li>
+               </ul>
+               <a href="#" class="icon icon-instagram"></a>
+               <a href="#" class="icon icon-whatsapp"></a>
+            </div>
+            <div class="footer__catalog footer__block">
+               <p class="footer__title">Каталог</p>
+               <ul>
+                  <li><a href="#" class="footer__link h7">Одежда</a></li>
+                  <li><a href="#" class="footer__link h7">Новинки</a></li>
+                  <li><a href="#" class="footer__link h7">Sale</a></li>
+               </ul>
+            </div>
+            <div class="footer__clients footer__block">
+               <p class="footer__title">Клиентам</p>
+               <ul>
+                  <li><a href="#" class="footer__link h7">Доставка</a></li>
+                  <li><a href="#" class="footer__link h7">Обмен и возврат</a></li>
+                  <li><a href="#" class="footer__link h7">Пользовательское соглашение</a></li>
+                  <li><a href="#" class="footer__link h7">Политика конфиденциальности</a></li>
+               </ul>
+            </div>
+            <div class="footer__contacts footer__block">
+               <p class="footer__title">Контакты</p>
+               <p class="footer__adress footer__link h7">адрес: г. Пермь, ул. Революции 20</p>
+               <a href="#" class="footer__link h7 footer__mail">gkp30@mail.ru</a>
+               <a class="footer__link-app" href="#"><img src="images/appstore.svg" alt=""></a>
+               <a class="footer__link-app" href="#"><img src="images/gplay.svg" alt=""></a>
+            </div>
+            <div class="footer__line-bottom h7">
+               <a href="#" class="footer__lang">
+                  <span class="icon icon-lang"></span>
+                  <p>English</p>
+               </a>
+               <p class="footer__license">8times, 2021</p>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER end -->
+
+   <!-- Scripts -->
+   <script src="js/main.min.js"></script>
+   <!-- Scripts  -->
+
+</body>
+
+</html>
